@@ -1,0 +1,74 @@
+@import '~lib/sandal/core';
+@import '~assets/css/core/functions', '~assets/css/core/mixins', '~assets/css/core/vars';
+@import '~assets/fonts/css/font-awesome.min.css';
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+[class^="vux"], [class^="weui"] {
+  box-sizing: initial;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+html, body {
+	width: 100%;
+	margin: 0 auto;
+	// background-color: $bg;
+}
+
+body {
+	max-width: $maxW;
+	min-width: $minW;
+	font-size: $font;
+	color: $fontColorBlack;
+	background-color: #fff;
+}
+
+.container {
+	width: 100%;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+}
+
+// 段落文字
+article {
+	& > h2 {
+		padding: 0 $padding;
+		font-size: $fontTitle;
+	}
+
+	& > p {
+		padding: 0 $padding;
+		text-indent: 2em;
+		text-align: justify;
+		line-height: 1.5;
+		margin-bottom: $marginBottom;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// 加载更多
+.loadmore {
+	@include halfpxline(0, $borderColor, 0, 0, 1px, 0);
+	width: 100%;
+	height: $loadmoreH;
+	line-height: $loadmoreH;
+	color: $fontColorBlack;
+	text-align: center;
+    display: block;
+    cursor: pointer;
+
+    &.active {
+    	cursor: auto;
+    }
+}

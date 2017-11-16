@@ -1,0 +1,74 @@
+@import '~lib/sandal/core';
+@import '~assets/css/core/functions', '~assets/css/core/mixins', '~assets/css/core/vars';
+
+$imgTextImgWidth: 100px;
+$imgTextTextSpanFont: 14px;
+$imgTextTextSpanFontColor: $fontColorGray;
+
+$tabBorderColor: $borderColor;
+$tabHeaderHeight: 44px;
+$tabTitleActiveBg: $bg;
+
+.img-text {
+	@include halfpxline(0, $tabBorderColor, 0 , 0, 1px, 0);
+	padding: $padding;
+	background-color: #fff;
+	display: flex;
+	overflow: hidden;
+	align-items:center;
+}
+
+.img-text-img {
+	width: $imgTextImgWidth;
+	height: $imgTextImgWidth;
+	background-size: cover;
+	background-position: center;
+}
+
+.img-text-text {
+	flex: 1;
+	padding-left: 15px;
+
+	p {
+		line-height: 1.75;
+		text-align: justify;
+	}
+
+	span {
+		font-size: $imgTextTextSpanFont;
+		color: $imgTextTextSpanFontColor;
+		display: block;
+	}
+}
+
+.img-text-status {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2px 2px 20px 40px;
+	background-color: $bg;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 130%;
+		height: 84%;
+		background: #fff;
+		z-index: 2;
+		transform: rotate(30deg);
+		transform-origin: 0 0;
+	}
+}
+
+.img-text-btn {
+	@include halfpxline(4px, $tabBorderColor, 1px, 1px, 1px, 1px);
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -18px;
+	line-height: 36px;
+	padding: 0 1em;
+	display: inline-block;
+}

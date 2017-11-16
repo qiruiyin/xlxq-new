@@ -1,0 +1,15 @@
+@charset 'utf-8';
+@import '~lib/sandal/core';
+@import '~assets/css/core/functions', '~assets/css/core/mixins', '~assets/css/core/vars';
+
+$cardHeaderHeight: 44px;
+
+.card {
+}
+
+.card-header {
+	height: $cardHeaderHeight;
+	line-height: $cardHeaderHeight;
+	padding: 0 $padding;
+	background-color: $bgYellow;
+}
